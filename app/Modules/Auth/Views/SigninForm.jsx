@@ -9,7 +9,7 @@ import * as WebStorageKeys from '../../../WebStorage/WebStorageKeys';
 
 const FormItem = Form.Item;
 
-const authURL = 'https://accounts.spotify.com/authorize?client_id=1c74ad8d2483424ca84efade725329c1&redirect_uri=https://hsienw.github.io/music-demo/#/auth&response_type=token';
+const authURL = 'https://accounts.spotify.com/authorize?client_id=1c74ad8d2483424ca84efade725329c1&redirect_uri=https://hsienw.github.io/music-demo/%23/auth&response_type=token';
 
 const FormContent = styled.div`
     width: 15%;
@@ -21,7 +21,7 @@ class SigninForm extends React.Component {
         const spotifyAuth = window.open(authURL, 'spotifyAuth', 'width=400,height=600,left=200,top=200');
 
         const getAuth = setInterval(() => {
-            const token = spotifyAuth.window.location.hash.substring(31);
+            const token = spotifyAuth.window.location.hash.substring(33);
 
             if (is.not.empty(token)) {
                 WebStorage.setSessionStorage(WebStorageKeys.TOKEN, token);
