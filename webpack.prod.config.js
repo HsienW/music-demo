@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: './app/App.jsx',
     output: {
-        path: path.resolve(__dirname, './'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.js',
     },
 
@@ -77,6 +77,5 @@ module.exports = {
             VERSION_NAME: JSON.stringify('0.0.18301'),
             VERSION_CODE: JSON.stringify('1'),
         }),
-        new webpack.HashedModuleIdsPlugin(),
     ],
 };
