@@ -4,8 +4,7 @@ import PlayListContentView from '../Views/PlayListContentView';
 import * as AudioActionsCreator from '../../Audio/Actions/AudioActionsCreator';
 
 export default connect(
-    (state) => {
-        return {actionType: state.PlayListContentReducer.actionType};
+    (state) => {return {actionType: state.PlayListContentReducer.actionType};
     },
     (dispatch) => {
         return {
