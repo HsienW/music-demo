@@ -9,7 +9,7 @@ import * as WebStorageKeys from '../../../WebStorage/WebStorageKeys';
 
 const FormItem = Form.Item;
 
-const authURL = 'https://accounts.spotify.com/authorize?client_id=1c74ad8d2483424ca84efade725329c1&redirect_uri=https://hsienw.github.io/music-demo/#/auth&response_type=token';
+const authURL = 'https://accounts.spotify.com/authorize?client_id=1c74ad8d2483424ca84efade725329c1&response_type=token&redirect_uri=https://hsienw.github.io/music-demo/#/auth';
 
 const FormContent = styled.div`
     width: 15%;
