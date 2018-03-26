@@ -21,7 +21,7 @@ class SigninForm extends React.Component {
         const spotifyAuth = window.open(authURL, 'spotifyAuth', 'width=400,height=600,left=200,top=200');
 
         const getAuth = setInterval(() => {
-            const token = spotifyAuth.window.location.hash.substring(24);
+            const token = spotifyAuth.window.location.hash.substring(16);
 
             if (is.not.empty(token)) {
                 WebStorage.setSessionStorage(WebStorageKeys.TOKEN, token);
